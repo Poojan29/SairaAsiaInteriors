@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "348642450009",
+    "firebase_url": "https://saira-asia-interiors.firebaseio.com",
+    "project_id": "saira-asia-interiors",
+    "storage_bucket": "saira-asia-interiors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348642450009:android:1e0981d5d7e38c34f6af48",
+        "android_client_info": {
+          "package_name": "com.example.sairaasiainteriors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348642450009-5ijn1ilhqtj1nu5nf5l5gfjtdmk6dm2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTZ7-_GXt_CoD2sGlsDNvNtTX2o5jJQrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348642450009-5ijn1ilhqtj1nu5nf5l5gfjtdmk6dm2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

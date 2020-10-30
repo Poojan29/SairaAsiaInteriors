@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SairaAsia Interiors</string>
+    <string name="logo">Logo</string>
+    <string name="register">Register</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="new_user">New User?</string>
+
+</resources>

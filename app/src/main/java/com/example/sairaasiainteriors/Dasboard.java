@@ -3,6 +3,7 @@ package com.example.sairaasiainteriors;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -25,12 +26,14 @@ public class Dasboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Dasboard.this, "Coming soon!!!", Toast.LENGTH_SHORT).show();
+
             }
         });
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Dasboard.this, "Coming soon!!!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), Attendance.class));
+
             }
         });
         cardView3.setOnClickListener(new View.OnClickListener() {

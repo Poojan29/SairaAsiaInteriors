@@ -9,68 +9,67 @@
     android:orientation="vertical"
     tools:context=".Register">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ProgressBar
-            android:id="@+id/reg_progressbar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:visibility="invisible"
-            android:indeterminateTint="@color/colorPrimaryDark"
-            android:indeterminate="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="200dp"
-            android:layout_height="66dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="18dp"
-            android:contentDescription="@string/logo"
-            android:src="@drawable/saira" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="30dp"
-            android:gravity="center_horizontal"
-            android:text="@string/register"
-            android:textColor="#DD0808"
-            android:textSize="30sp" />
-
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal"
-            android:paddingStart="14.5dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <View
-                android:layout_width="5.6dp"
+            <ProgressBar
+                android:id="@+id/reg_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#F23838" />
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorPrimaryDark"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="276dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/saira" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/register"
+                android:textColor="#DD0808"
+                android:textSize="30sp" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="240dp"
+                android:orientation="horizontal"
+                android:paddingStart="14.5dp">
+
+                <View
+                    android:layout_width="5.6dp"
+                    android:layout_height="wrap_content"
+                    android:background="#F23838" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -136,45 +135,52 @@
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
-        </LinearLayout>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/regbutton"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/buttonractangle"
-            android:backgroundTint="#FFFD1616"
-            android:text="@string/register" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/regbutton"
+                android:layout_width="147dp"
                 android:layout_height="wrap_content"
-                android:text="@string/create_new_account"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/buttonractangle"
+                android:backgroundTint="#FFFD1616"
+                android:text="@string/register" />
 
-            <TextView
-                android:id="@+id/logintxt"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/login"
-                android:textColor="#FFFD1616"
-                android:textSize="15sp" />
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_new_account"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/logintxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/login"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFD1616"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
-
-
-    </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

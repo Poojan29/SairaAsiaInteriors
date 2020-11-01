@@ -37,12 +37,12 @@
 
         <ImageView
             android:id="@+id/textView7"
-            android:layout_width="200dp"
-            android:src="@drawable/saira"
-            android:layout_height="66dp"
+            android:layout_width="286dp"
+            android:layout_height="95dp"
             android:layout_gravity="center"
             android:layout_marginTop="18dp"
-            android:contentDescription="@string/logo" />
+            android:contentDescription="@string/logo"
+            android:src="@drawable/saira" />
 
         <TextView
             android:layout_width="match_parent"
@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal">
 
             <TextView

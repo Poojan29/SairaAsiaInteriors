@@ -16,5 +16,15 @@
     <string name="_1">1</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="akshay_kumar">Akshay Kumar</string>
+    <string name="attandance">Attandance</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="halfleave">HalfLeave</string>
+    <string name="fullleave">FullLeave</string>
+    <string name="note_late_time">Note late time</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="xyz">XYZ</string>
+    <string name="fullname">Fullname</string>
 
 </resources>

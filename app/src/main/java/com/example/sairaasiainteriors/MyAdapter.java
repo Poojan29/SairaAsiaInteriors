@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -23,6 +24,14 @@ public class MyAdapter extends FirebaseRecyclerAdapter<EmployeeNames, MyAdapter.
     protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull EmployeeNames model) {
         holder.employeename.setText(model.getName());
         holder.indexno.setText(model.getIndexno());
+
+        holder.employeename.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity appCompatActivity = (AppCompatActivity)view.getContext();
+                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.emp_name_layout, new EmployeeRecord()).addToBackStack(null).commit();
+            }
+        });
     }
 
     @NonNull

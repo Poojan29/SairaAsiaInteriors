@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:id="@+id/emp_name_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,8 +9,7 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginTop="10dp"
     android:scrollbars="vertical"
-    android:background="#DD0808"
-    >
+    android:background="#DD0808">
 
 
     <LinearLayout
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:hint="@string/_1"
             android:textColorHint="@color/black"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
 
         <View
             android:layout_gravity="center_vertical"
@@ -45,10 +45,11 @@
             android:id="@+id/employeename"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:text="@string/xyz"
+            android:textSize="25sp"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:hint="Chandrakant"
-            android:textColorHint="@color/black"
-            android:textSize="25sp" />
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

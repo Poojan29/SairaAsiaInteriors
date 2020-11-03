@@ -72,7 +72,7 @@ public class EmployeeRecord extends Fragment {
         if (bundle != null) {
             index = bundle.getString("indexno");
 
-            databaseReference = FirebaseDatabase.getInstance().getReference("Employee").child(index);
+            databaseReference = FirebaseDatabase.getInstance().getReference("Employee").child(index).child("Attendance");
 
             TextView empname = view.findViewById(R.id.emp_name);
             RadioGroup radioGroup = view.findViewById(R.id.radiogroup);

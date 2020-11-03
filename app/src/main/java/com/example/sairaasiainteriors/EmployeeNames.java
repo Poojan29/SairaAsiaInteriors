@@ -24,9 +24,6 @@ public class EmployeeNames {
     }
 
     public String getName() {
-        if (name.isEmpty()){
-            name="";
-        }
         return name;
     }
 
@@ -35,9 +32,6 @@ public class EmployeeNames {
     }
 
     public String getIndexno() {
-        if (indexno.isEmpty()){
-            indexno="";
-        }
         return indexno;
     }
 

@@ -25,6 +25,12 @@ public class MyAdapter extends FirebaseRecyclerAdapter<EmployeeNames, MyAdapter.
     protected void onBindViewHolder(@NonNull final viewholder holder, final int position, @NonNull final EmployeeNames model) {
         holder.employeename.setText(model.getName());
         holder.indexno.setText(model.getIndexno());
+        if (holder.employeename.getText().toString().isEmpty()){
+            holder.employeename.setText("");
+        }
+        if (holder.indexno.getText().toString().isEmpty()){
+            holder.indexno.setText("");
+        }
 
         holder.employeename.setOnClickListener(new View.OnClickListener() {
             @Override

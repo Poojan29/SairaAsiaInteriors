@@ -4,24 +4,44 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class EmployeeRecord extends Fragment {
-
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
     private String mParam1;
     private String mParam2;
+
+    String name;
+    RadioGroup radioGroup;
+    RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
+    DatabaseReference databaseReference;
+    String index;
 
     public EmployeeRecord() {
 
     }
 
+    public EmployeeRecord(String name) {
+        this.name = name;
+//        this.radioGroup = radioGroup;
+//        this.radioButton1 = radioButton1;
+//        this.radioButton2 = radioButton2;
+//        this.radioButton3 = radioButton3;
+//        this.radioButton4 = radioButton4;
+    }
 
     public static EmployeeRecord newInstance(String param1, String param2) {
         EmployeeRecord fragment = new EmployeeRecord();
@@ -45,6 +65,41 @@ public class EmployeeRecord extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_employee_record, container, false);
+        Bundle bundle = getArguments();
+
+        View view = inflater.inflate(R.layout.fragment_employee_record, container, false);
+
+        if (bundle != null) {
+            index = bundle.getString("indexno");
+
+            databaseReference = FirebaseDatabase.getInstance().getReference("Employee").child(index);
+
+            TextView empname = view.findViewById(R.id.emp_name);
+            RadioGroup radioGroup = view.findViewById(R.id.radiogroup);
+            final RadioButton radioButton1 = view.findViewById(R.id.present_radio);
+            RadioButton radioButton2 = view.findViewById(R.id.absent_radio);
+            RadioButton radioButton3 = view.findViewById(R.id.half_radio);
+            RadioButton radioButton4 = view.findViewById(R.id.full_radio);
+
+            empname.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (radioButton1.isChecked()) {
+                        Toast.makeText(getContext(), radioButton1.getText().toString() + " for " + name, Toast.LENGTH_SHORT).show();
+                        databaseReference.child(name).setValue(radioButton1.getText().toString());
+                    } else {
+                        Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+            empname.setText(name);
+
+            Toast.makeText(getContext(), index, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+        }
+        return view;
     }
 }

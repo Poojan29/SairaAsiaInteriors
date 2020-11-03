@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,14 +16,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/akshay_kumar"
-            android:textStyle="bold"
             android:textSize="35sp"
+            android:textColor="@color/colorPrimary"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp" />
 
-
         <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.AppCompat.Body2"
+            style="@style/TextAppearance.AppCompat.Display1"
             android:id="@+id/textView3"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
@@ -32,7 +30,6 @@
             android:text="@string/attandance"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:textStyle="bold"
             android:layout_marginTop="40dp" />
 
         <LinearLayout
@@ -40,54 +37,84 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-            <CheckBox
-                android:id="@+id/checkbox1"
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="40dp"
-                android:textSize="23sp"
-                android:theme="@style/CheckBox"
-                android:textColor="@color/black"
-                android:text="@string/present"/>
+                android:id="@+id/radiogroup">
 
-            <CheckBox
-                android:id="@+id/checkbox2"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="23sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:theme="@style/CheckBox"
-                android:text="@string/absent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/checkbox3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/halfleave"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:theme="@style/CheckBox" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/checkbox4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/fullleave"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:theme="@style/CheckBox" />
+                        <RadioButton
+                            android:id="@+id/present_radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/present"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:theme="@style/CheckBox" />
+
+                        <RadioButton
+                            android:id="@+id/absent_radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/absent"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:theme="@style/CheckBox" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/half_radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="23sp"
+                            android:theme="@style/CheckBox"
+                            android:textColor="@color/black"
+                            android:text="@string/halfleave"/>
+
+                        <RadioButton
+                            android:id="@+id/full_radio"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="23sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:textColor="@color/black"
+                            android:theme="@style/CheckBox"
+                            android:text="@string/fullleave" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -109,11 +136,6 @@
 
         </LinearLayout>
 
-
-
     </LinearLayout>
-
-
-
 
 </FrameLayout>

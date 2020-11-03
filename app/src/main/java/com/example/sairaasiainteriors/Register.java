@@ -32,8 +32,7 @@ public class Register extends AppCompatActivity {
     FirebaseAuth mAuth;
     TextView loginaccount;
     DatabaseReference databaseReference;
-    FirebaseDatabase firebaseDatabase;
-    String userID;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

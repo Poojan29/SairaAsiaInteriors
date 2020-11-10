@@ -38,22 +38,12 @@
             android:orientation="vertical">
 
             <RadioGroup
-                android:layout_width="match_parent"
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radiogroup">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="vertical">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                >
 
                         <RadioButton
                             android:id="@+id/present_radio"
@@ -72,20 +62,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="10dp"
                             android:text="@string/absent"
                             android:textColor="@color/black"
                             android:textSize="23sp"
                             android:theme="@style/CheckBox" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-
-                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/half_radio"
@@ -93,6 +75,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
                             android:textSize="23sp"
                             android:theme="@style/CheckBox"
                             android:textColor="@color/black"
@@ -105,14 +88,14 @@
                             android:textSize="23sp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="10dp"
                             android:textColor="@color/black"
                             android:theme="@style/CheckBox"
                             android:text="@string/fullleave" />
 
-                    </LinearLayout>
 
-                </LinearLayout>
+
+
 
             </RadioGroup>
 

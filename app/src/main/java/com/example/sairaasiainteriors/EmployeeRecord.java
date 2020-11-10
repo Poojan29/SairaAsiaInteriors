@@ -77,16 +77,25 @@ public class EmployeeRecord extends Fragment {
             TextView empname = view.findViewById(R.id.emp_name);
             RadioGroup radioGroup = view.findViewById(R.id.radiogroup);
             final RadioButton radioButton1 = view.findViewById(R.id.present_radio);
-            RadioButton radioButton2 = view.findViewById(R.id.absent_radio);
-            RadioButton radioButton3 = view.findViewById(R.id.half_radio);
-            RadioButton radioButton4 = view.findViewById(R.id.full_radio);
+            final RadioButton radioButton2 = view.findViewById(R.id.absent_radio);
+            final RadioButton radioButton3 = view.findViewById(R.id.half_radio);
+            final RadioButton radioButton4 = view.findViewById(R.id.full_radio);
 
             empname.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (radioButton1.isChecked()) {
                         Toast.makeText(getContext(), radioButton1.getText().toString() + " for " + name, Toast.LENGTH_SHORT).show();
-                        databaseReference.child(name).setValue(radioButton1.getText().toString());
+                        databaseReference.setValue(radioButton1.getText().toString());
+                    }else if (radioButton2.isChecked()){
+                        Toast.makeText(getContext(), radioButton2.getText().toString() + " for " + name, Toast.LENGTH_SHORT).show();
+                        databaseReference.setValue(radioButton2.getText().toString());
+                    }else if (radioButton3.isChecked()){
+                        Toast.makeText(getContext(), radioButton3.getText().toString() + " for " + name, Toast.LENGTH_SHORT).show();
+                        databaseReference.setValue(radioButton3.getText().toString());
+                    }else if (radioButton4.isChecked()){
+                        Toast.makeText(getContext(), radioButton4.getText().toString() + " for " + name, Toast.LENGTH_SHORT).show();
+                        databaseReference.setValue(radioButton4.getText().toString());
                     } else {
                         Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
                     }

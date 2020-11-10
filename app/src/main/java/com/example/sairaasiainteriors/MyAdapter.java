@@ -46,7 +46,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<EmployeeNames, MyAdapter.
 
                 Toast.makeText(view.getContext(), holder.indexno.getText().toString(), Toast.LENGTH_LONG).show();
                 AppCompatActivity appCompatActivity = (AppCompatActivity)view.getContext();
-                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.emp_name_layout, myfragment).addToBackStack(null).commit();
+                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.emp_name_layout, myfragment, model.getName()).addToBackStack(null).commit();
             }
         });
     }

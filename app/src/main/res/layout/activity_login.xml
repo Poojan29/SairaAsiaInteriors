@@ -87,7 +87,9 @@
                         android:layout_marginTop="10dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:drawableStart="@drawable/ic_email"
                             android:id="@+id/email_login"
+                            android:drawablePadding="10dp"
                             android:layout_width="280dp"
                             android:layout_height="wrap_content"
                             android:hint="@string/e_mail"
@@ -105,6 +107,8 @@
                         android:layout_marginTop="10dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:drawableStart="@drawable/ic_lock"
+                            android:drawablePadding="10dp"
                             android:id="@+id/password_login"
                             android:layout_width="280dp"
                             android:layout_height="wrap_content"
@@ -138,7 +142,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:background="@drawable/buttonractangle"
             android:backgroundTint="#F43B3B"
             android:text="@string/login"
             android:textAllCaps="false"/>

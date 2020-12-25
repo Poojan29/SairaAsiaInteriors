@@ -48,7 +48,7 @@ public class Attendance extends AppCompatActivity {
         if (bundle != null) {
             current_name = bundle.getString("Username");
             databaseReference = FirebaseDatabase.getInstance().getReference("Employee").child(current_name).child("Attendance");
-            empname.setText(currentDateandTime);
+            empname.setText(current_name);
         }else {
             Toast.makeText(this, "Error accured", Toast.LENGTH_SHORT).show();
         }

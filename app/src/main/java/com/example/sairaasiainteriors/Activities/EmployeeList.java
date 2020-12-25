@@ -32,6 +32,7 @@ public class EmployeeList extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar);
         recyclerView = findViewById(R.id.recview_empname);
         recyclerView.setLayoutManager(new LinearLayoutManager(EmployeeList.this));
+        recyclerView.setHasFixedSize(true);
         progressBar.setVisibility(View.VISIBLE);
         FirebaseRecyclerOptions<AddMemberModel> options =
                 new FirebaseRecyclerOptions.Builder<AddMemberModel>()

@@ -28,5 +28,7 @@
     <string name="fullname">Fullname</string>
     <string name="add_member">Add Member</string>
     <string name="confirm">Confirm</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="about_us">About Us</string>
 
 </resources>

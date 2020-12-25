@@ -41,9 +41,14 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.login_progessbar);
 
         if (mAuth.getCurrentUser() != null){
-            Toast.makeText(this, "User already logged in!", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "Already Logged in", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), Dasboard.class));
-        } // it is check that current user previously logged in or not
+            progressBar.setVisibility(View.GONE);
+            finish();
+        }else{
+
+        }// it is check that current user previously logged in or not
 
 
         nlogin.setOnClickListener(new View.OnClickListener() {

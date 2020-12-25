@@ -26,5 +26,7 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="xyz">XYZ</string>
     <string name="fullname">Fullname</string>
+    <string name="add_member">Add Member</string>
+    <string name="confirm">Confirm</string>
 
 </resources>

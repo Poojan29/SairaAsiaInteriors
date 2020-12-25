@@ -1,4 +1,4 @@
-package com.example.sairaasiainteriors;
+package com.example.sairaasiainteriors.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sairaasiainteriors.Models.Employee;
+import com.example.sairaasiainteriors.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 
 import com.google.android.gms.tasks.Task;
@@ -41,7 +43,6 @@ public class Register extends AppCompatActivity {
 
         loginaccount = findViewById(R.id.logintxt);
         username = findViewById(R.id.username_register);
-        fullname = findViewById(R.id.fullname_register);
         emailid = findViewById(R.id.email_register);
         password = findViewById(R.id.password_register);
         regbtn = findViewById(R.id.regbutton);
@@ -55,7 +56,7 @@ public class Register extends AppCompatActivity {
         loginaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
 
@@ -65,16 +66,11 @@ public class Register extends AppCompatActivity {
 
                 final String email = emailid.getText().toString().trim();
                 final String pass = password.getText().toString().trim();
-                final String full = fullname.getText().toString();
                 final String users = username.getText().toString();
 
 
                 if (users.isEmpty()){
                     Toast.makeText(Register.this, "Please enter your Username.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (full.isEmpty()){
-                    Toast.makeText(Register.this, "Please enter your Fullname.", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (email.isEmpty()){
@@ -90,7 +86,7 @@ public class Register extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
 
-                                Employee information = new Employee(users, email, full);
+                                Employee information = new Employee(users, email);
 
                                 FirebaseDatabase.getInstance().getReference("Employees")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

@@ -1,4 +1,4 @@
-package com.example.sairaasiainteriors;
+package com.example.sairaasiainteriors.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.example.sairaasiainteriors.R;
 
 public class Dasboard extends AppCompatActivity {
 
@@ -36,9 +38,9 @@ public class Dasboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                startActivity(new Intent(getApplicationContext(), Attendance.class));
+                startActivity(new Intent(getApplicationContext(), EmployeeList.class));
                 progressBar.setVisibility(View.GONE);
-
+                finish();
             }
         });
         cardView3.setOnClickListener(new View.OnClickListener() {

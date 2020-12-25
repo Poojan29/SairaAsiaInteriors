@@ -1,19 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/attendance_layout"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout android:id="@+id/emp_record_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Attendance">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".Activities.Attendance"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <TextView
+        android:id="@+id/emp_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/akshay_kumar"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attandance"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+                    <RadioButton
+                        android:id="@+id/present_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/present"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:padding="5dp"
+                        android:theme="@style/CheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/absent_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/absent"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:theme="@style/CheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/half_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="23sp"
+                        android:theme="@style/CheckBox"
+                        android:textColor="@color/black"
+                        android:text="@string/halfleave"/>
+
+                    <RadioButton
+                        android:id="@+id/full_radio"
+                        android:padding="5dp"
+                        android:textSize="23sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBox"
+                        android:text="@string/fullleave" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/late_time"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/note_late_time"
+                android:textColorHint="@color/black"
+                android:maxLines="1"
+                android:inputType="textPhonetic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/confirm"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

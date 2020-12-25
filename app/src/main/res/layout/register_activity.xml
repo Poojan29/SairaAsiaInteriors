@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#f2f2f2"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".Activities.Register">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -74,26 +74,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/fullname_register"
-                            android:drawableStart="@drawable/ic_person"
-                            android:drawablePadding="10dp"
-                            android:layout_width="280dp"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/fullname"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:textColorHint="@color/black" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"

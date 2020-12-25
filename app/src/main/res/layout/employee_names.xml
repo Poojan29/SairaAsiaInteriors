@@ -11,7 +11,6 @@
     android:scrollbars="vertical"
     android:background="#DD0808">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -26,16 +25,16 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp">
 
-        <TextView
-            android:id="@+id/indexno"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:hint="@string/_1"
-            android:textColorHint="@color/black"
-            android:textSize="30sp" />
+        <ImageView
+            android:id="@+id/demo_person"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/person"
+            android:layout_gravity="center"/>
 
         <View
+            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
             android:layout_width="2dp"
             android:layout_height="70dp"
@@ -48,7 +47,9 @@
             android:text="@string/xyz"
             android:textSize="25sp"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:maxLines="1"
             android:textColor="@color/black"/>
 
     </LinearLayout>

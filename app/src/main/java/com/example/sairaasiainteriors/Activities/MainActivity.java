@@ -1,4 +1,4 @@
-package com.example.sairaasiainteriors;
+package com.example.sairaasiainteriors.Activities;
 
 import android.app.Activity;
 

@@ -1,16 +1,18 @@
 package com.example.sairaasiainteriors.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.sairaasiainteriors.Activities.PersonData;
 import com.example.sairaasiainteriors.R;
 
 import java.util.ArrayList;
@@ -35,14 +37,19 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     @Override
     public void onBindViewHolder(@NonNull RecordViewHolder holder, int position) {
 
-        String name =username.get(position);
+        final String name =username.get(position);
 
         holder.name.setText(name);
 
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Ye feature bhi jaldi aayega.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), PersonData.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("CurrentUserName", name);
+                intent.putExtras(bundle);
+                view.getContext().startActivity(intent);
+
             }
         });
     }

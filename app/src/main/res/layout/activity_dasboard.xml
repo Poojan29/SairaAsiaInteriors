@@ -60,7 +60,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#DF990D">
+                android:background="@color/dark_red">
 
                 <TextView
                     android:id="@+id/textView3"
@@ -94,7 +94,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorAccent">
+                android:background="@color/dark_red">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -104,7 +104,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="Attendance"
-                    android:textColor="#000000"
+                    android:textColor="@color/white"
                     android:textSize="24sp" />
 
                 <ImageView
@@ -125,6 +125,7 @@
         android:layout_marginBottom="124dp"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -133,51 +134,16 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/work"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/Work"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:text="Work"
-                    android:textColor="@color/cardview_light_background"
-                    android:textSize="24sp" />
-
-                <ImageView
-                    android:id="@+id/Work"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    app:srcCompat="@drawable/work" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:id="@+id/recordcard"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             app:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="176dp"
                 android:layout_height="match_parent"
-                android:background="#1B08BC">
+                android:background="@color/dark_red">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -187,7 +153,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="Record"
-                    android:textColor="#FFFC3B"
+                    android:textColor="@color/white"
                     android:textSize="24sp" />
 
                 <ImageView

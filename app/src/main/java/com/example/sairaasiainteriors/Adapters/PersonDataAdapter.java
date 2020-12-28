@@ -35,9 +35,13 @@ public class PersonDataAdapter extends RecyclerView.Adapter<PersonDataAdapter.Pe
     public void onBindViewHolder(@NonNull PersonDataViewHolder holder, int position) {
         PersonDataModel personDataModel = arrayList.get(position);
 
-//        holder.date.setText(personDataModel.getDate());
-        holder.work.setText(personDataModel.getName());
-        holder.attendance.setText(personDataModel.getAttendance());
+        String name = personDataModel.getName();
+        String attendance = personDataModel.getAttendance();
+        String date = personDataModel.getDate();
+
+        holder.work.setText(String.valueOf(name));
+        holder.date.setText(String.valueOf(date));
+        holder.attendance.setText(String.valueOf(attendance));
 
     }
 

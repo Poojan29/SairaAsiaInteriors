@@ -2,7 +2,17 @@ package com.example.sairaasiainteriors.Models;
 
 public class EmployeeRecordAttendance {
 
-    public String name, date, attendance;
+    public String name, date, attendance, work;
+
+    public EmployeeRecordAttendance() {
+    }
+
+    public EmployeeRecordAttendance(String name, String date, String attendance, String work) {
+        this.name = name;
+        this.date = date;
+        this.attendance = attendance;
+        this.work = work;
+    }
 
     public String getName() {
         return name;
@@ -28,12 +38,13 @@ public class EmployeeRecordAttendance {
         this.attendance = attendance;
     }
 
-    public EmployeeRecordAttendance() {
+    public String getWork() {
+        return work;
     }
 
-    public EmployeeRecordAttendance(String name, String date, String attendance) {
-        this.name = name;
-        this.date = date;
-        this.attendance = attendance;
+    public void setWork(String work) {
+        this.work = work;
     }
+
+
 }

@@ -4,14 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         app:cardCornerRadius="5dp"
-        android:layout_margin="5dp"
-        android:backgroundTint="#FBF7F5"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#f5f5f5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,10 +31,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/date"
-                android:textSize="25sp"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
                 android:padding="5dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -40,10 +42,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/work"
-                android:textSize="25sp"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
                 android:padding="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:maxLength="13"
+                android:layout_weight="1.5"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -51,10 +54,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/attandance"
-                android:textSize="25sp"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
                 android:padding="5dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:textColor="@color/black"/>
 
         </LinearLayout>

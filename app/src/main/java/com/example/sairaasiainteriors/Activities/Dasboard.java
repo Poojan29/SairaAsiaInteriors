@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Dasboard extends AppCompatActivity {
 
-    CardView cardView1, cardView2, cardView3, cardView4;
+    CardView cardView1, cardView2, cardView3;
     ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
 
@@ -28,8 +28,7 @@ public class Dasboard extends AppCompatActivity {
 
         cardView1 = findViewById(R.id.dailyrecord);
         cardView2 = findViewById(R.id.attendance);
-        cardView3 = findViewById(R.id.work);
-        cardView4 = findViewById(R.id.recordcard);
+        cardView3 = findViewById(R.id.recordcard);
         progressBar = findViewById(R.id.dasboard_progessbar);
 
         setTitle("Dashboard");
@@ -37,8 +36,9 @@ public class Dasboard extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Dasboard.this, "Coming soon!!!", Toast.LENGTH_SHORT).show();
-
+                progressBar.setVisibility(View.VISIBLE);
+                startActivity(new Intent(getApplicationContext(), DailyRecord.class));
+                progressBar.setVisibility(View.GONE);
             }
         });
         cardView2.setOnClickListener(new View.OnClickListener() {
@@ -52,13 +52,9 @@ public class Dasboard extends AppCompatActivity {
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Dasboard.this, "Coming soon!!!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        cardView4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 startActivity(new Intent(getApplicationContext(), Record.class));
+                progressBar.setVisibility(View.GONE);
             }
         });
     }

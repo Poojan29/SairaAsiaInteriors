@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.PersonData"></activity>
+        <activity android:name=".Activities.DailyRecord"></activity>
+        <activity android:name=".Activities.PersonData" />
         <activity android:name=".Activities.Record" />
         <activity android:name=".Activities.EmployeeList" />
         <activity android:name=".Activities.AddMember" />

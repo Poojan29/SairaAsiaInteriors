@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.sairaasiainteriors.Adapters.PersonDataAdapter;
 import com.example.sairaasiainteriors.Models.PersonDataModel;
@@ -35,7 +34,7 @@ public class PersonData extends AppCompatActivity {
         setContentView(R.layout.activity_person_data);
 
         recyclerView = findViewById(R.id.recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(PersonData.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         personDataModelArrayList = new ArrayList<>();
 
@@ -49,20 +48,19 @@ public class PersonData extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
+                if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                         String date = dataSnapshot.child("date").getValue(String.class);
+                        String work = dataSnapshot.child("work").getValue(String.class);
                         String attendance = dataSnapshot.child("attendance").getValue(String.class);
-                        String name = dataSnapshot.child("name").getValue(String.class);
-                        PersonDataModel model = new PersonDataModel();
-                        model.setAttendance(attendance);
-                        model.setDate(date);
-                        model.setName(name);
-                        Log.d("Snapshot",model.attendance);
+
+                        PersonDataModel model = new PersonDataModel(attendance, date, work);
+                        personDataModelArrayList.add(model);
+                        Log.d("Poojan", String.valueOf(personDataModelArrayList));
                     }
+                    personDataAdapter = new PersonDataAdapter(PersonData.this, personDataModelArrayList);
+                    recyclerView.setAdapter(personDataAdapter);
                 }
-                personDataAdapter = new PersonDataAdapter(PersonData.this, personDataModelArrayList);
-                recyclerView.setAdapter(personDataAdapter);
             }
 
             @Override

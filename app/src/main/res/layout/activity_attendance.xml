@@ -13,11 +13,12 @@
         android:id="@+id/emp_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/akshay_kumar"
+        android:text="@string/username"
         android:textSize="25sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
 
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextAppearance.AppCompat.Display1"
@@ -85,32 +86,22 @@
 
         </RadioGroup>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/late_time"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/note_late_time"
-                android:textColorHint="@color/black"
-                android:maxLines="1"
-                android:inputType="textPhonetic"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="@string/confirm"
             android:layout_gravity="center"
-            android:layout_marginTop="150dp"/>
+            android:layout_marginTop="100dp"/>
 
     </LinearLayout>
 

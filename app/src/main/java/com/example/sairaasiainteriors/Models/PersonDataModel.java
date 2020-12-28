@@ -2,12 +2,13 @@ package com.example.sairaasiainteriors.Models;
 
 public class PersonDataModel {
 
-    public String attendance, date, name;
+    public String attendance, date, work;
 
-    private PersonDataModel(String attendance, String date, String name) {
+
+    public PersonDataModel(String attendance, String date, String work) {
         this.attendance = attendance;
         this.date = date;
-        this.name = name;
+        this.work = work;
     }
 
     public String getAttendance() {
@@ -27,13 +28,10 @@ public class PersonDataModel {
     }
 
     public String getName() {
-        return name;
+        return work;
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public PersonDataModel() {
+        this.work = name;
     }
 }

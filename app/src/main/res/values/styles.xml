@@ -4,10 +4,9 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#F35D52</item>
         <item name="colorPrimaryDark">#DD0808</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="CheckBox" parent="Theme.AppCompat.Light">
-        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
 
     </style>
 

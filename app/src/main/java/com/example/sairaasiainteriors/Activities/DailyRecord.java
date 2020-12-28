@@ -36,6 +36,7 @@ public class DailyRecord extends AppCompatActivity {
         setContentView(R.layout.activity_daily_record);
 
         recyclerView = findViewById(R.id.recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         dailyRecordModels = new ArrayList<>();
 
@@ -53,10 +54,12 @@ public class DailyRecord extends AppCompatActivity {
                         String work = dataSnapshot.child(currentDateandTime).child("work").getValue(String.class);
                         String attendance = dataSnapshot.child(currentDateandTime).child("attendance").getValue(String.class);
 
+                        Log.d("Data1", name);
+
                         DailyRecordModel dailyRecordModel = new DailyRecordModel(name, work, attendance);
                         dailyRecordModels.add(dailyRecordModel);
 
-                        Log.d("Ridham", String.valueOf(dailyRecordModel));
+                        Log.d("Data2", dailyRecordModel.getAttendance());
                     }
 
                     dailyRecordAdapter = new DailyRecordAdapter(DailyRecord.this, dailyRecordModels);

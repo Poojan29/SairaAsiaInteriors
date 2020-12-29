@@ -2,6 +2,7 @@ package com.example.sairaasiainteriors.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,11 +16,9 @@ import android.widget.Toast;
 
 import com.example.sairaasiainteriors.Models.EmployeeRecordAttendance;
 import com.example.sairaasiainteriors.R;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -72,7 +71,6 @@ public class Attendance extends AppCompatActivity implements AdapterView.OnItemS
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         text = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -93,6 +91,9 @@ public class Attendance extends AppCompatActivity implements AdapterView.OnItemS
 
                 EmployeeRecordAttendance employeeRecordAttendance = new EmployeeRecordAttendance(current_name, currentDateandTime, radioButton.getText().toString(), text);
                 databaseReference1.setValue(employeeRecordAttendance);
+
+                startActivity(new Intent(getApplicationContext(), EmployeeList.class));
+                finish();
                 }
             }
         });

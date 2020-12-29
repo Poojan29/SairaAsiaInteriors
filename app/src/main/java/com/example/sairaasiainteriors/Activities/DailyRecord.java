@@ -44,22 +44,23 @@ public class DailyRecord extends AppCompatActivity {
         currentDateandTime = sdf.format(new Date());
 
         databaseReference = FirebaseDatabase.getInstance().getReference("EmployeeRecord");
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                dailyRecordModels.clear();
                 if (snapshot.exists()){
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                         String name = dataSnapshot.child(currentDateandTime).child("name").getValue(String.class);
                         String work = dataSnapshot.child(currentDateandTime).child("work").getValue(String.class);
                         String attendance = dataSnapshot.child(currentDateandTime).child("attendance").getValue(String.class);
 
-                        Log.d("Data1", name);
+                        if (name==null && work==null && attendance==null){
 
-                        DailyRecordModel dailyRecordModel = new DailyRecordModel(name, work, attendance);
-                        dailyRecordModels.add(dailyRecordModel);
+                        }else {
 
-                        Log.d("Data2", dailyRecordModel.getAttendance());
+                            DailyRecordModel dailyRecordModel = new DailyRecordModel(name, work, attendance);
+                            dailyRecordModels.add(dailyRecordModel);
+                        }
                     }
 
                     dailyRecordAdapter = new DailyRecordAdapter(DailyRecord.this, dailyRecordModels);
